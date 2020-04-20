@@ -1,0 +1,57 @@
+html,
+body {
+    width: 100vw;
+    padding-top: 40px;
+    background-color: black;
+}
+
+#flex-container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    flex-grow: 1;
+    width: 250px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+ul li img {
+    width: 100%;
+}
+
+ul li a span {
+    color: white;
+    position: absolute;
+    bottom: 7px;
+    left: 15px;
+    z-index: 3;
+}
+
+.magnify {
+    background: url('../images//magnify.png') no-repeat;
+    position: absolute;
+    z-index: 5;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+ul li:hover .magnify {
+    opacity: 100;
+}
+
+ul li:hover {
+    opacity: 0.8;
+}
